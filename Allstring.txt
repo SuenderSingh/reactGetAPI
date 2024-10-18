@@ -3,6 +3,7 @@ let str = "SurenderSingh"
 let strOne = str.split("")
 let strnew = [];
 
+
 for(let i = strOne.length-1 ;i>=0;i--){
 
     if( strOne[i] === strOne[i].toUpperCase())
