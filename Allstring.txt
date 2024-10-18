@@ -1,0 +1,101 @@
+let str = "SurenderSingh"
+
+let strOne = str.split("")
+let strnew = [];
+
+for(let i = strOne.length-1 ;i>=0;i--){
+
+    if( strOne[i] === strOne[i].toUpperCase())
+    {
+        strnew.push(strOne[i].toLowerCase())
+    }
+    else{
+        strnew.push(strOne[i].toUpperCase()) 
+    }
+}
+console.log(strnew.join(""));
+
+
+//////
+
+
+let str = "my name is surender singh gaur "
+
+let strOne = str.split(" ")
+let strnew = [];
+let num ='r'
+
+for(let i = strOne.length-1 ;i>=0;i--){
+
+    if(!num.includes(strOne[i]) )
+    {
+        strnew.push(strOne[i])
+    }
+}
+console.log(strnew.join(""));
+
+//////let str = "my name is surender singh gaur "
+
+let strOne = str.split(" ")
+let strnew = [];
+console.log(strOne.includes("gaur"));
+
+/////let str = "myname"
+
+let strOne = str.split("")
+let vovel = 0;
+let element  = 0;
+
+
+for(let i =0;i<=strOne.length-1;i++){
+    if(['a','i','e','o','u'].includes(strOne[i])){
+        vovel = vovel+1
+    }
+}
+
+console.log(vovel);
+
+console.log(strOne.length -vovel);
+
+
+/////
+
+let str = "surender"
+let strone = "surendersing"
+
+let strnew = str.split("")
+let strnewone = strone.split("")
+
+let same =  strnew.filter((item , index) =>{
+
+    return item === strnewone[index]
+
+})
+
+console.log(same.join(""));
+
+////
+
+    let str = "navan"
+    let plandrom = true
+
+    for(let i =0;i<=str.length /2;i++){
+
+        if(str[i] != str[str.length-1-i]){
+            plandrom= false
+
+            break;
+        }
+
+       
+    }
+    if(plandrom){
+        console.log("plandrom");
+        
+    }
+    else{
+        console.log("not");
+        
+    }
+
+

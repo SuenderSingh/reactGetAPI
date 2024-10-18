@@ -1,0 +1,143 @@
+//forEach 
+let arr = [1,2,3,4,5,7]
+ arr.forEach((number , index ) =>{
+    console.log(number , index );
+    
+})
+ 
+//map 
+let arr = [1,2,3,4,5,7]
+ 
+
+arr.map((item , index , arr) =>{
+
+    console.log(item , index , arr);
+    
+})
+ 
+///cancatnate 
+let arr = [1,2,3,4,5,7]
+
+let arrOne = [8,9,10,11,12,23]
+
+let arrtwo = arr+arrOne
+
+console.log(arrtwo);
+
+//splice 
+let arr = [1,2,3,4,5,7]
+
+let arrOne = [8,9,10,11,12,23]
+
+let arrTwo = arr.splice(2,1.,"surender")
+console.log(arr);
+
+///Delete element from arr 
+
+let arr = [1,2,3,4,5,7]
+
+let arrOne = [8,9,10,11,12,23]
+
+delete arr[3]
+console.log(arr);
+
+
+/// reduce method 
+let arr = [1,2,3,1,5,7]
+
+let arrOne = [8,9,10,11,12,23]
+
+let sumall = arr.reduce((a,b) =>a+b);
+
+console.log(sumall);
+
+
+///remove the dupicate number 
+let arr = [1,2,3,1,5,7]
+let  revNum = [];
+let temp;
+for(let i =1 ; i<=arr.length-1;i++){
+    for(let j=i+1;j<=arr.length-1;j++){
+if(arr[i] > arr[j])
+{
+    temp = arr[i],
+    arr[i] = arr[j]
+    arr[j] =temp
+
+}
+    }
+}
+
+let newarr = arr.filter((item , index) =>{
+    return arr[index] != arr[index+1]
+})
+
+console.log(newarr);
+
+//factorial 
+
+let arr = [2,3,4,5]
+
+let factorial = 1;
+
+for(let i=0;i<=arr.length-1;i++){
+
+    factorial *= arr[i]
+}
+console.log(factorial);
+
+// factorial with recurtion 
+let num =5
+
+function factorial(n){
+
+    if(n===0){
+        return 1
+    }
+    return n*factorial(n-1)
+}
+
+
+console.log(factorial(num));
+
+/////misisng number 
+let arr = [1, 2, 3, 5, 6, 7];
+
+let missingNumber = arr.find((item, index) => {
+    return item != index + 1;
+});
+
+console.log(missingNumber - 1);
+
+///////sting number 
+let str ="surender9211@gmil.com"
+
+
+let num =[] ;
+let elemtnt  =[];
+
+for(let i =0;i<=str.length-1; i++){
+    if(str[i]>= '0' && str[i]<='9')
+    {
+        num.push(str[i])
+    }
+
+   
+}
+
+console.log(num , elemtnt);
+
+///remove the vovvel 
+
+let strone  = "surendersinghgaur";
+
+let newstring = []
+for(let i =0; i<=strone.length-1;i++){
+    if(!['a','e','i','o','u'].includes(strone[i].toLocaleLowerCase())){
+        newstring.push(strone[i])
+    }
+}
+console.log(newstring);
+
+
+
